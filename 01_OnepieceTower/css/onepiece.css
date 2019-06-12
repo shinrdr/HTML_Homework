@@ -1,0 +1,92 @@
+/* 區塊 */
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.85em;
+    font-weight: bold;
+    font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+}
+#left {
+    width: 52%;
+    height: 100%;
+    background-color: #5CB6E7;
+    background-image: url(../img/foreign_parts_left.png);
+    background-position: 35px,-30px;
+    background-repeat: no-repeat;
+    position: fixed;
+}
+#right {
+    position: absolute;
+    float: right;
+    left: 52%;
+    top: 0px;
+    text-align: center;
+}
+#div_allconect {
+    padding: 50px 70px 15px 70px;
+    background-image: url(../img/bg_dot.jpg);
+}
+
+/* 文字 */
+p {
+    line-height: 1em;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.sub_title {
+    text-align: center
+}
+
+.text_content {
+    text-align: left;
+}
+.img_title{
+    margin: 20px 0px 20px 0px;
+}
+.memo {
+    font-size: 0.7em;
+}
+
+/* 圖片 */
+#banner_img:hover {
+    opacity: 0.7;
+}
+
+#date_01 {
+    margin: 30px 0px 40px 0px;
+}
+
+#copyright {
+    text-align: left;
+    padding: 20px 70px 20px 70px;
+}
+
+
+/* 表格 */
+table {
+    text-align: center;
+    border-collapse: collapse;
+
+    width:100% 
+}
+table th{
+    background-color: #5CB6E7;
+    border: 1px solid #bbbbbb;
+    padding: 15px;
+}
+table td {
+    border: 1px solid #bbbbbb;
+    padding: 15px;
+}
