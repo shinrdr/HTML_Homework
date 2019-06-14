@@ -4,25 +4,22 @@ body {
     padding: 0px;
     font-size: 0.85em;
     font-weight: bold;
-    font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+    font-family: 'Lucida Grande';
 }
 #left {
-    width: 52%;
+    width: 50%;
     height: 100%;
     background-color: #5CB6E7;
-    background-image: url(../img/foreign_parts_left.png);
-    background-position: 35px,-30px;
-    background-repeat: no-repeat;
     position: fixed;
 }
 #right {
     position: absolute;
     float: right;
-    left: 52%;
+    left: 50%;
     top: 0px;
     text-align: center;
 }
-#div_allconect {
+#main {
     padding: 50px 70px 15px 70px;
     background-image: url(../img/bg_dot.jpg);
 }
@@ -60,6 +57,9 @@ h2 {
 }
 
 /* 圖片 */
+#left_pic {
+    padding-left: 12%
+}
 #banner_img:hover {
     opacity: 0.7;
 }

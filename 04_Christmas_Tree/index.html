@@ -1,7 +1,3 @@
-<!--    * -->
-<!--   *** -->
-<!--  ***** -->
-<!-- ******* -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,15 +9,25 @@
 <body>
 
     <script>
-        // 分解動作
-        // 1. 觀察列和星星數量的變化: 星星數量 = 最終列 + 最終列 - 1
-        //    1＝>1、2=>3、3=>5、4=>7、5=>9
-        // 2. 觀察列和空白數量的變化: 假設以四列舉例
-        //    第一列：1=>3、5=>7
-        //    第二列：1=>2、6=>7
-        //    第三列：1=>1、7=>7
-        //    第四列：
-        // 3. 觀察星星中間位置: 中間位置 = 最終列
+        // 行數
+        var line = 4
+
+        document.write("<div>")
+        for (var i = 1; i <= line; i++) {
+            // 空白    
+            for (var h = line - 1; h >= i; h--) {
+
+                document.write("&emsp;");
+            }
+            // 星號
+            for (var j = 1; j <= 2 * i - 1; j++) {
+         
+                document.write("＊")
+            }
+            document.write('<br/>')
+        }
+        document.write("</div>")
+        
     </script>
 </body>
 

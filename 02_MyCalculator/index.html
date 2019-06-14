@@ -3,13 +3,59 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>My Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MyCaculator</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="./js/main.js"></script>
 </head>
 
 <body>
+    <h1>
+        <div>
+            <div id="caculator">
+                <div id="result_panel">
+                    <p id="preview">new caculator</p>
+                    <p id="screen"></p>
+                </div>
+                <div id="main_div">
+                    <div class="row">
+                        <button class="col-sm-3" id="delete">C</button>
+                        <button class="col-sm-3 negative">±</button>
+                        <button class="col-sm-3 operator" value="%">%</button>
+                        <button class="col-sm-3 operator" value="+">+</button>
+                    </div>
+                    <div class="row">
+                        <button class="col-sm-3 num" value=7>7</button>
+                        <button class="col-sm-3 num" value=8>8</button>
+                        <button class="col-sm-3 num" value=9>9</button>
+                        <button class="col-sm-3 operator" value='-'>－</button>
+                    </div>
+                    <div class="row">
+                        <button class="col-sm-3 num" value=4>4</button>
+                        <button class="col-sm-3 num" value=5>5</button>
+                        <button class="col-sm-3 num" value=6>6</button>
+                        <button class="col-sm-3 operator" value='*'>×</button>
+                    </div>
+                    <div class="row">
+                        <button class="col-sm-3 num" value=1>1</button>
+                        <button class="col-sm-3 num" value=2>2</button>
+                        <button class="col-sm-3 num" value=3>3</button>
+                        <button class="col-sm-3 operator" value='/'>÷</button>
+                    </div>
+                    <div class="row">
+                        <button class="col-sm-6 zero" value=0>0</button>
+                        <!-- <button class="col-sm-3 period">.</button> -->
+                        <button class="col-sm-6" id="eqn-bg">＝</button>
+                    </div>
+                </div>
+            </div>
 
-   <p><a href="https://www.desmos.com/scientific" target="_blank">參考網路上面的計算機</a></p>
-    
+        </div>
+    </h1>
 </body>
 
 </html>
