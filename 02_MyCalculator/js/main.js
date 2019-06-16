@@ -1,22 +1,18 @@
 window.onload = function () {
 
-    var current,
-        screen,
+    var screen,
         output,
         limit,
         zero,
-        period,
         operator;
 
     screen = document.getElementById("screen");
 
-    var elem = document.querySelectorAll(".num");
+    // 所有class為num，添加click事件
+    var num = document.querySelectorAll(".num");
+    for (var i = 0; i < num.length; i++) {
 
-    var len = elem.length;
-
-    for (var i = 0; i < len; i++) {
-
-        elem[i].addEventListener("click", function () {
+        num[i].addEventListener("click", function () {
 
             num = this.value;
 
@@ -25,56 +21,38 @@ window.onload = function () {
             limit = output.length;
 
             if (limit > 16) {
-
-                alert("Sorry no more input is allowed");
-
+                alert("超過範圍");
             }
 
         }, false);
 
     }
-
+    // 處理0的邏輯
     document.querySelector(".zero").addEventListener("click", function () {
 
         zero = this.value;
 
-        if (screen.innerHTML === "") {
-
-            output = screen.innerHTML = zero;
-        } else if (screen.innerHTML === output) {
-
-            output = screen.innerHTML += zero;
-
+        if (screen.innerHTML != 0) {
+            screen.innerHTML += zero
+        } else {
+            screen.innerHTML = zero
         }
-
     }, false);
 
-    // document.querySelector(".period").addEventListener("click", function () {
-
-    //     period = this.value;
-
-    //     if (screen.innerHTML === "") {
-
-    //         output = screen.innerHTML = screen.innerHTML.concat("0.");
-
-    //     } else if (screen.innerHTML === output) {
-
-    //         screen.innerHTML = screen.innerHTML.concat(".");
-
-    //     }
-
-    // }, false);
-    document.querySelector('.negative').addEventListener('click', function() {
-       screen.innerHTML= screen.innerHTML- (screen.innerHTML *2)
-        
+    // 正負號
+    function negative(num) {
+        return num * -1
+    }
+    document.querySelector('.negative').addEventListener('click', function () {
+        screen.innerHTML = negative(screen.innerHTML);
     })
 
-    document.querySelector("#eqn-bg").addEventListener("click", function () {
+    // 等於的click事件
+    document.querySelector("#eqaul").addEventListener("click", function () {
 
         if (screen.innerHTML === output) {
 
             screen.innerHTML = eval(output);
-
             output = screen.innerHTML;
 
         } else {
@@ -83,33 +61,29 @@ window.onload = function () {
 
     }, false);
 
+    // 清除事件
     document.querySelector("#delete").addEventListener("click", function () {
 
         screen.innerHTML = "";
 
     }, false);
 
+    // class為operator，添加click事件
+    var operator = document.querySelectorAll(".operator");
 
-    var elem1 = document.querySelectorAll(".operator");
-
-    var len1 = elem1.length;
+    var len1 = operator.length;
 
     for (var i = 0; i < len1; i++) {
 
-        elem1[i].addEventListener("click", function () {
+        operator[i].addEventListener("click", function () {
 
             operator = this.value;
-
             if (screen.innerHTML === "") {
-
                 screen.innerHTML = screen.innerHTML.concat("");
 
             } else if (output) {
-
                 screen.innerHTML = output.concat(operator);
-
             }
-
         }, false);
 
     }
